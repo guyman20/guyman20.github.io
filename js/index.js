@@ -4,6 +4,9 @@
 	   console.log("widget 3");
 	   console.log(formID);
 	   console.log(value);	
+	   
+	   params = JFCustomWidget.getWidgetSettings()
+	   console.log(params)
    }
    
    function submitCallback(formID, value) {
@@ -22,8 +25,6 @@
    JFCustomWidget.subscribe("ready", readyCallback);
    JFCustomWidget.subscribe("submit", submitCallback)
 
-   
-   
    $.widget("custom.rangeslider", {
 
       // Default options
