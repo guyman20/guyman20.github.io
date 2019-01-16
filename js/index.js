@@ -1,7 +1,7 @@
 (function($) {
    
    function readyCallback(formID, value) {
-	   console.log("widget 2");
+	   console.log("widget 3");
 	   console.log(formID);
 	   console.log(value);	
    }
@@ -14,7 +14,9 @@
 	    //this is your field result. You are expected to send value property as string
 	    result.value = "my precious data"
 	    //most probably you will call sendSubmit method
-	    JFCustomWidget.sendSubmit(result)
+	   console.log("sending submit")
+	   JFCustomWidget.sendSubmit(result)
+	   
    }
    
    JFCustomWidget.subscribe("ready", readyCallback);
