@@ -1,9 +1,21 @@
 // Colors
-
 $green:  #5bb73b;
 $grey:   #3d4647;
 $blue:   #236192;
+$slider-track--color--default: #CCC;
+$slider-track--color--start: #1ABC9C;
+$slider-track--color--middle: #F1C40F;
+$slider-track--color--end: #E74C3C;
 
+$slider-track--color--default: #CCC;
+$slider-track--color--start: #1ABC9C;
+$slider-track--color--middle: #F1C40F;
+$slider-track--color--end: #E74C3C;
+$slider-track--radius: 10px;
+$slider-track--height: 14px;
+$slider-track--border-width: 0;
+$slider-handle--size: 28px;
+$slider-handle--dot--size: $slider-handle--size - 10px;
 /* ==========================================================================
    Range Slider
 
@@ -37,35 +49,52 @@ $blue:   #236192;
       color: transparent;
    }
 
+   
    /* Special handle styling for WebKit/Blink */
    .range-slider--slide::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      height: 15px;
-      width: 15px;
-      border-radius: 50%;
-      background: $grey;
-      cursor: pointer;
-      margin-top: -5px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    width: $slider-handle--size;
+    height: $slider-handle--size;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    background: #FFF;
+    margin-top: -($slider-handle--size - $slider-track--height) ;
+    border: {
+      radius: 50%;
+      width: 0;
+    }
+          &:active { box-shadow: 0 3px 30px rgba(0,0,0,0.5); }
+
+   
    }
 
    /* All the same stuff for Firefox */
    .range-slider--slide::-moz-range-thumb {
-      height: 15px;
-      width: 15px;
-      border-radius: 50%;
-      background: $grey;
-      cursor: pointer;
-      border: 0;
+ width: $slider-handle--size;
+    height: $slider-handle--size;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    background: #FFF;
+    margin-top: -($slider-handle--size - $slider-track--height) ;
+    border: {
+      radius: 50%;
+      width: 0;
+    }
+          &:active { box-shadow: 0 3px 30px rgba(0,0,0,0.5); }
    }
 
    /* All the same stuff for IE */
    .range-slider--slide::-ms-thumb {
-      height: 15px;
-      width: 15px;
-      border-radius: 50%;
-      background: $grey;
-      cursor: pointer;
-      border: 0;
+ width: $slider-handle--size;
+    height: $slider-handle--size;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    background: #FFF;
+    margin-top: -($slider-handle--size - $slider-track--height) ;
+    border: {
+      radius: 50%;
+      width: 0;
+    }
+          &:active { box-shadow: 0 3px 30px rgba(0,0,0,0.5); }
    }
 
    /* Track styles */
@@ -117,8 +146,8 @@ $blue:   #236192;
       border-radius: 4px;
       background: $grey;
       padding: 5px 10px;
-      margin-left: -13px;
-      top: 9px;
+      margin-left: -10px;
+      top: ($slider-handle--size)/2;
 
       &:after {
          position: absolute;

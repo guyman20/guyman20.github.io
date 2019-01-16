@@ -54,7 +54,7 @@
              slider_value    = slider_input.value,
              width           = slider_input.clientWidth,
              pos_calc        = (slider_value / input_max) * 100,
-             pixel_pos       = (pos_calc / 100) * width,
+             pixel_pos       = (pos_calc / 100) * (width-30),
              $output         = $(self).children('.js-range-output');
 
          // Position output elem & inject slider value
