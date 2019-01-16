@@ -1,14 +1,24 @@
 (function($) {
    
    function readyCallback(formID, value) {
-	   console.log("widget working");
+	   console.log("widget 2");
 	   console.log(formID);
-	   console.log(value);
-	
-	
+	   console.log(value);	
    }
    
-   JFCustomWidget.subscribe("ready", readyCallback)
+   function submitCallback(formID, value) {
+	var result = {}
+	    //this part will be used if your field is required. If your widget is required valid
+	    //property will be expected before form can be submitted
+	    result.valid = true;
+	    //this is your field result. You are expected to send value property as string
+	    result.value = "my precious data"
+	    //most probably you will call sendSubmit method
+	    JFCustomWidget.sendSubmit(result)
+   }
+   
+   JFCustomWidget.subscribe("ready", readyCallback);
+   JFCustomWidget.subscribe("submit", submitCallback)
 
    
    
