@@ -1,5 +1,15 @@
 (function($) {
    
+   function readyCallback(formID, value) {
+	   console.log(formID);
+	   console.log(value);
+	   
+   }
+   
+   JFCustomWidget.subscribe("ready", readyCallback)
+
+   
+   
    $.widget("custom.rangeslider", {
 
       // Default options
