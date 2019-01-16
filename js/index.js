@@ -1,6 +1,7 @@
 (function($) {
    
    function readyCallback(formID, value) {
+	   console.log("widget working");
 	   console.log(formID);
 	   console.log(value);
 	   
