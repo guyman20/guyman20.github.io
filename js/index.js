@@ -1,32 +1,39 @@
+$("#range").slider();
 
-function onSubscribe() {
-    var result = {}
+function callback() {
+    var result = {};
     result.valid = true;
-    result.value = "my precious data"
-    JFCustomWidget.sendSubmit(result)
-    console.log("subscribe!");
+    result.value = $("#range")[0].value.toString();
+    console.log("sending submit");
+
+    JFCustomWidget.sendSubmit(result);
 }
 
-JFCustomWidget.subscribe("submit", onSubscribe)
-console.log("widget running");
+JFCustomWidget.subscribe("submit", callback);
 
 $(function() {
-    $("#range").slider();
-            $("#details").hide();
-            $("#final").show();
+    $("#details").hide();
+    $("#final").show();
 
     var startPos = $("#range").slider("value"),
-        endPos = '';
+        endPos = "";
 
     $("#range").on("input", function(event, ui) {
         value = event.currentTarget.value;
         if (value == 100) {
             $("#details").hide();
             $("#final").show();
-        }
-        else {
+        } else {
             $("#details").show();
             $("#final").hide();
         }
+    });
+
+    $("#range").on("change", function(event, ui) {
+        value = event.currentTarget.value;
+        var result = {};
+        result.value = value.toString();
+        JFCustomWidget.sendData(result);
+        console.log(result);
     });
 });
