@@ -34,9 +34,5 @@ $(function() {
         var result = {};
         result.value = value.toString();
         JFCustomWidget.sendData(result);
-                
-        console.log("settings:");
-        console.log(JFCustomWidget.getWidgetSettings());
-
     });
 });
