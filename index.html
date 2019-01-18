@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cross-Browser Range Input With Solid Lower Fill</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+
+<form id="myform" oninput="animated.value=range.value; textual.value=100-range.value">
+    <input type="range" value="100" step="5" min="50" max="100" id="range">
+
+    </input>
+</form>
+
+<div class="text-container">
+    <div id="details">
+        <div class="animated">
+            <p style="display: inline-block;">
+                Animated Graphics:&nbsp&nbsp&nbsp&nbsp</p>
+            <p style="float: right;"><u><output form="myform" name="animated">100</output>%</p></u>
+        </div>
+        <div class="textual">
+            <p style="display: inline-block;">
+                Animated Text:
+            </p>
+            <p style="float: right;"><u>
+                <output form="myform" name="textual">0</output>%</u>
+            </p>
+        </div>
+    </div>
+    
+    <div id="final">
+        <div class="animated" style="font-size:35px">
+            Fully Animated Video!
+        </div>
+        <div class="subtext">
+            *Text where needed
+        </div>
+    </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+<script src='https://js.jotform.com/JotFormCustomWidget.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
