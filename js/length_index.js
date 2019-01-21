@@ -33,19 +33,20 @@ function mySecondInput(e){
 
 function callback() {
     var result = {};
-    result.valid = document.getElementById('seconds') > 0;
-    result.value = document.getElementById('seconds').toString();
+    result.valid = document.getElementById('seconds').value > 0;
+    result.value = document.getElementById('seconds').value.toString();
     console.log("sending submit");
+	console.log(result);
 
     JFCustomWidget.sendSubmit(result);
 }
 
 function sendData(){
         var result = {};
-        result.valid = document.getElementById('seconds') > 0;
-        result.value = document.getElementById('seconds').toString();
+        result.value = document.getElementById('seconds').value.toString();
         JFCustomWidget.sendData(result);
-        console.log("sending data");
+		console.log("sending data");
+		console.log(result);
 }
 
 JFCustomWidget.subscribe("submit", callback);
