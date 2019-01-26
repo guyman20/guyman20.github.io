@@ -34,6 +34,7 @@ span > input {
   font-size: 1.5em;
   text-align: center;
   box-shadow: 0 0 0.3em 0.05em rgba(0, 0, 0, 0.2);
+  width: 18em important!;
 }
 
 span > input + label {
