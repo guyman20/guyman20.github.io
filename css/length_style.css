@@ -1,4 +1,5 @@
 form {
+  flex-flow: row wrap;
   display: flex;
   justify-content: center;
 }
@@ -7,6 +8,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 span {
@@ -33,7 +35,6 @@ span > input {
   font-size: 1.5em;
   text-align: center;
   box-shadow: 0 0 0.3em 0.05em rgba(0, 0, 0, 0.2);
-  width: 18em !important;
 }
 
 span > input + label {
@@ -54,11 +55,42 @@ span > input:focus + label, span > input:valid + label {
   left: 0;
 }
 
+span > input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+span > input:-ms-input-placeholder {
+  color: transparent;
+}
+
+span > input::-ms-input-placeholder {
+  color: transparent;
+}
+
 span > input::placeholder {
   color: transparent;
 }
+
+span > input:focus::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  opacity: 50%;
+}
+
+span > input:focus:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  opacity: 50%;
+}
+
+span > input:focus::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  opacity: 50%;
+}
+
 span > input:focus::placeholder {
   color: rgba(0, 0, 0, 0.5);
-  font-size:18px;
+  font-size: 18px;
   opacity: 50%;
 }
