@@ -25,7 +25,9 @@ span {
   position: relative;
   font-family: sans-serif;
 }
-
+textarea {
+ min-width:18em; 
+}
 span > input {
   display: block;
   box-sizing: border-box;
