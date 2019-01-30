@@ -25,8 +25,8 @@ span {
   position: relative;
   font-family: sans-serif;
 }
-textarea {
- min-width:18em; 
+input[type="text"], input[type="number"], textarea {
+ min-width:18em !important; 
 }
 span > input {
   display: block;
