@@ -1,12 +1,15 @@
 form {
+      flex-flow: row wrap;
+
   display: flex;
   justify-content: center;
 }
 
 body {
   width: 100%;
-  margin: 0;
+    margin: 0;
   padding: 0;
+
   overflow: hidden;
 }
 
@@ -19,7 +22,7 @@ span {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
-  margin-top: 50px;
+  margin-top: 0.5em;
   margin-left: 5px;
   margin-right: 5px;
   position: relative;
@@ -54,4 +57,12 @@ span > input:focus + label, span > input:valid + label {
   transform: translateY(50px);
   font-size: 12px;
   left: 0;
+}
+span > input::placeholder {
+  color: transparent;
+}
+span > input:focus::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-size:18px;
+  opacity: 50%;
 }
