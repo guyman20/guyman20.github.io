@@ -86,13 +86,13 @@ span > input:focus:-ms-input-placeholder {
 }
 
 span > input:focus::-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(1, 0, 0, 0.5);
   font-size: 18px;
   opacity: 50%;
 }
 
 span > input:focus::placeholder {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(1, 0, 0, 0.5);
   font-size: 18px;
   opacity: 50%;
 }
