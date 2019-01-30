@@ -53,3 +53,12 @@ span > input:focus + label, span > input:valid + label {
   font-size: 12px;
   left: 0;
 }
+
+span > input::placeholder {
+  color: transparent;
+}
+span > input:focus::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-size:18px;
+  opacity: 50%;
+}
