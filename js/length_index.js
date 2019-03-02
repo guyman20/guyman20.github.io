@@ -2,6 +2,10 @@
 document.getElementById('words').addEventListener('input', myWordInput);
 document.getElementById('seconds').addEventListener('input', mySecondInput);
 
+window.parent.document.getElementsByTagName('iframe')[0].height = '100px';
+console.log("changed height!")
+console.log(window.parent.document.getElementsByTagName('iframe'));
+
 function myWordInput(e){
   words = document.getElementById('words').value;
   if (!(/^\d+$/.test(words))) {
