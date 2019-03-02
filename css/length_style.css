@@ -2,6 +2,8 @@ form {
   flex-flow: row wrap;
   display: flex;
   justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 body {
